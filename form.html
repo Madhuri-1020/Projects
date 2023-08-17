@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        .box{
+            border: 1px solid red;
+            border-radius: 10px;
+            padding: 100px;
+            border-width: 2px;
+            margin: auto;
+            width: 210px;
+            @media only screen and (max-width: 600px){
+                
+            }
+        }
+        .ep, .dnone{
+
+            color: red;
+        }
+        
+        .dnone{
+            display: none;
+        }
+        @media only screen and (min-width:420px) and (max-width:1024px){
+            div{
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <h2>Login Form</h2>
+            <h3>
+            <label for="Email">Email: <span class="ep">*</span></label>
+            <input type="email" name="Email" id="Email" placeholder="Enter your Email">
+            <span class="dnone" id="er">Please Enter Email</span>
+            </h3>
+
+            <h3>
+            <label for="Password">Password: <span class="ep">*</span></label>
+            <input type="Password" name="Password" id="password" placeholder="Enter Password">
+            <span class="dnone" id="pr">Please Enter Password</span>
+            </h3>
+            <input type="button" name="Login" id="login" value="Login">
+        </form>
+        <h4>Forgot Passsword? <a href="#">Click Here </a></h4>
+        <h4>Create an Account <a href="#">Click Here</a> </h4>
+
+    </div>
+</body>
+<script>
+document.getElementsByTagName('div')[0].classList="box";
+
+document.getElementById('login').addEventListener('click', function(){
+    let em, pasw;
+    em=document.getElementById('Email').value;
+    pasw=document.getElementById('password').value;
+    
+    if (em ==""){
+        document.getElementById('er').style.display='block';
+    }else{
+        document.getElementById('er').style.display='none';
+    }
+
+    if (pasw==""){
+        document.getElementById('pr').style.display='block';
+    }else{
+        document.getElementById('pr').style.display='none';
+
+    }
+
+    if(em!="" && pasw!=""){
+        alert('log in successfull');
+    }
+
+});
+</script>
+</html>

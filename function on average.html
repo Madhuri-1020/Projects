@@ -1,0 +1,44 @@
+<!-- write  a function name average that takes array of numbers as input and return those numbers  -->
+<!-- named filter even number that takes array of numbers as input and returns new array containing only numbers -->
+<!-- write a function name factorial that takkes an nuber as an input and returns its factorial -->
+<!-- write a function named getgrid that takes an number(score) as a input and return the corresponding letter great based on the following scale A(90-100), B(80-89), c(70-79),D(60-69),F(0-59) by using switch case -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average in functions</title>
+</head>
+
+<body>
+    <script>
+
+        //   traditional method
+        var a = [1, 2, 3, 4, 5];
+        var sum = 0;
+        function average() {
+            for (let i = 0; i < a.length; i++)
+                sum = sum + a[i];
+            var avg = sum / a.length;
+            return avg;
+        }
+        console.log(average());
+
+        // using arrow function
+        var sum1 = 0;
+        var averag = (array = [1, 2, 3]) => {
+            for (let j = 0; j < array.length; j++)
+                sum1 = sum1 + array[j];
+            return av = sum1 / array.length;
+
+        }
+        console.log(averag());
+
+    
+    </script>
+</body>
+
+</html>
